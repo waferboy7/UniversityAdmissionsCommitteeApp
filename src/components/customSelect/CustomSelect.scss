@@ -1,0 +1,71 @@
+$primary-color: #333; // Замените цвет по вашему выбору
+
+.custom-select {
+  position: relative;
+  width: 200px; // Задайте ширину по вашему выбору
+  font-family: Arial, sans-serif; // Замените на ваш шрифт
+
+  .select-header {
+    padding: 10px;
+    background-color: #555; // Цвет фона заголовка
+    color: #fff; // Цвет текста заголовка
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.open {
+      background-color: #444; // Цвет фона заголовка при открытом состоянии
+    }
+  }
+
+  .options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333; // Цвет фона выпадающего списка
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); // Тень для стиля
+
+    li {
+      padding: 10px;
+      color: #fff; // Цвет текста в списке
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #555; // Цвет фона при наведении
+      }
+    }
+  }
+}
+
+// Анимация раскрытия и закрытия
+@keyframes slideDown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 300px; // Задайте максимальную высоту по вашему выбору
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 300px; // Задайте максимальную высоту по вашему выбору
+  }
+  to {
+    max-height: 0;
+  }
+}
+
+.select-header,
+.options-list {
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+.select-header {
+  animation-name: slideUp;
+}
+
+.options-list {
+  animation-name: slideDown;
+}
