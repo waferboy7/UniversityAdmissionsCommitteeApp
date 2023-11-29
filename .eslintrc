@@ -1,0 +1,54 @@
+{
+  "root": true,
+  "env": { "browser": true, "es2020": true },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "ignorePatterns": ["dist", "vite.config.ts", ".eslintrc"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["simple-import-sort", "@typescript-eslint", "react-refresh"],
+  "rules": {
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+    "@typescript-eslint/no-unused-vars": "off",
+    "eol-last": "off",
+    "linebreak-style": "off",
+    "@typescript-eslint/quotes": "off",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^\\u0000"],
+          ["^@?\\w"],
+          ["^"]
+        ]
+      }
+    ],
+    "import/newline-after-import": "error",
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": "off",
+    "semi": "off",
+    "react/button-has-type": "off",
+    "react/no-array-index-key": "off",
+    "react/function-component-definition": "off",
+    "react/react-in-jsx-scope": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/no-unresolved": "off",
+    "object-curly-newline": "off",
+    "import/extensions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+    "jsx-a11y/no-static-element-interactions": "warn"
+  }
+}
