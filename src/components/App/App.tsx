@@ -1,20 +1,24 @@
 import './App.scss';
 
-import { useState } from 'react';
+import Guest from '@components/guest/Guest';
+import StatementPage from '@components/statementPage/StatementPage';
+import User from '@components/user/User';
+import PrivateRouter from '@components/utils/router/PrivateRouter';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const buttonClick = () => {
-    setCount(count + 1);
-  };
-
   return (
-    <div>
-      <h1>Hello World!</h1>
-      <button onClick={buttonClick}>{count}</button>
-      <hr />
-      <a href="https://google.com">google</a>
+    <div className="app">
+      <BrowserRouter>
+        <Routes>
+          <Route element={<PrivateRouter />}>
+            <Route path="/statement/:statementId" element={<StatementPage />} />
+            <Route path="/user" element={<User />} />
+          </Route>
+          <Route path="/" element={<Guest />} />
+          <Route path="*" element={<h1>404</h1>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

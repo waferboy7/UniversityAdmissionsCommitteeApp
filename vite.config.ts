@@ -9,6 +9,8 @@ export default defineConfig({
       '@assets': '/src/assets',
       '@components': '/src/components',
       '@interfaces': '/src/interfaces',
+      '@constants': '/src/constants',
+      '@utils': '/src/utils',
     },
   },
 });
