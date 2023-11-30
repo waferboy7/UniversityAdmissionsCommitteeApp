@@ -24,16 +24,7 @@
     "@typescript-eslint/quotes": "off",
     "simple-import-sort/exports": "error",
     "import/first": "error",
-    "simple-import-sort/imports": [
-      "error",
-      {
-        "groups": [
-          ["^\\u0000"],
-          ["^@?\\w"],
-          ["^"]
-        ]
-      }
-    ],
+    "simple-import-sort/imports": "error",
     "import/newline-after-import": "error",
     "consistent-return": "off",
     "import/no-extraneous-dependencies": "off",
@@ -49,6 +40,6 @@
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-noninteractive-element-interactions": "off",
     "jsx-a11y/no-noninteractive-tabindex": "off",
-    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn"
   }
 }
