@@ -1,9 +1,10 @@
+import Cookies from 'js-cookie';
 import { Navigate, Outlet } from 'react-router-dom';
 
 const PrivateRouter: React.FC = () => {
-  const auth = true;
+  const auth = Cookies.get('auth');
 
-  return (auth ? <Outlet /> : <Navigate to="/" />);
+  return (auth === 'true' ? <Outlet /> : <Navigate to="/login" />);
 };
 
 export default PrivateRouter;

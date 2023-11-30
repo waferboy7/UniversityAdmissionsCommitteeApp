@@ -11,6 +11,7 @@ export default defineConfig({
       '@interfaces': '/src/interfaces',
       '@constants': '/src/constants',
       '@utils': '/src/utils',
+      '@pages': '/src/pages',
     },
   },
 });
