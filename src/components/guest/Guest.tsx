@@ -1,6 +1,7 @@
 import './Guest.scss';
 
 import CustomSelect from '@components/customSelect/CustomSelect';
+import Header from '@components/header/Header';
 import Table from '@components/table/Table';
 import allItems from '@constants/index';
 import ISpecialtyApplicationsCount from '@interfaces/specialtyApplicationsCount';
@@ -23,6 +24,7 @@ const Guest: React.FC = () => {
 
   return (
     <div>
+      <Header />
       <h1>Custom Select Example</h1>
       <CustomSelect options={options} onSelect={handleSelect} />
       <Table items={items} />

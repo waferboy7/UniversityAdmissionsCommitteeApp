@@ -20,10 +20,15 @@ const User = () => {
     navigate('/');
   };
 
+  const logout = () => {
+    navigate('/logout');
+  };
+
   return (
     <div className="user">
       <button onClick={toTablePage}>Таблица</button>
       <button onClick={addStatement}>Добавить заявление</button>
+      <button onClick={logout}>Выйти</button>
       <hr />
       <StatementList statements={statements} />
     </div>
